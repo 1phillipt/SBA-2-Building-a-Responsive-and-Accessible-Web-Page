@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+      <link rel="stylesheet" href="styles.css">
+
   </head>
   <body>
     <header>
       <div>
-        <img scr="logo.jpg" alt="Accessible Design Co. logo" />
+        <img scr="logo" alt="Accessible Design Co. logo" />
         <span>Accessible Design Co.</span>
       </div>
       <nav role="navigation" aria-level="Primary nagivation">
@@ -98,8 +101,106 @@
           </article>
         </div>
       </section>
+      <section id="contact" aria-labelledby="contact-title">
+        <header>
+          <h2 id="contact-title">Contact</h2>
+          <p id="contact-intro">
+            Send us a message and we will get back to you within 1–2 business
+            days.
+          </p>
+        </header>
+
+        <form
+          action="#"
+          method="post"
+          aria-describedby="contact-intro form-help"
+        >
+          <p id="form-help">
+            All fields are required. Use the Tab key to move between fields.
+          </p>
+
+          <div>
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              aria-describedby="name-help"
+            />
+            <small id="name-help">Enter your full name.</small>
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              aria-describedby="email-help"
+            />
+            <small id="email-help">Example: name@example.com</small>
+          </div>
+
+          <div>
+            <label for="subject">Subject</label>
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              required
+              aria-describedby="subject-help"
+            />
+            <small id="subject-help">Briefly describe your request.</small>
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+              aria-describedby="message-help"
+            ></textarea>
+            <small id="message-help"
+              >Include any timeline, links, or requirements.</small
+            >
+          </div>
+
+          <!-- Optional: reserved area for validation messages -->
+          <p id="form-status" aria-live="polite"></p>
+
+          <button type="submit">Send message</button>
+        </form>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer>
+  <section aria-labelledby="footer-title">
+    <h2 id="footer-title">Footer</h2>
+
+    <p>
+      © 2025 Accessible Design Co. All rights reserved.
+    </p>
+
+    <address>
+      <p>Email: <a href="mailto:hello@accessibledesignco.example">hello@accessibledesignco.example</a></p>
+      <p>Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+    </address>
+
+    <nav aria-label="Social media links">
+      <ul>
+        <li><a href="#" aria-label="Accessible Design Co. on Twitter">Twitter</a></li>
+        <li><a href="#" aria-label="Accessible Design Co. on LinkedIn">LinkedIn</a></li>
+        <li><a href="#" aria-label="Accessible Design Co. on GitHub">GitHub</a></li>
+      </ul>
+    </nav>
+  </section>
+</footer>
+
   </body>
 </html>

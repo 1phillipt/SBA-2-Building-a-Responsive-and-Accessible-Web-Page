@@ -1,0 +1,387 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: hsl(217, 62%, 95%);
+  --surface: #ffffff;
+  --text: hsl(218, 44%, 18%);
+  --muted: hsl(220, 15%, 40%);
+  --brand: hsl(228, 45%, 35%);
+  --brand-hover: hsl(228, 45%, 28%);
+  --border: rgba(0, 0, 0, 0.12);
+  --focus: hsl(40, 100%, 45%);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --container: 1100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+header,
+main,
+footer {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  padding: 10px 12px;
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--focus);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  left: 16px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+header > div {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+header > div > a,
+header > div > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+header img {
+  border-radius: 10px;
+}
+
+nav[role="navigation"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav[role="navigation"] a {
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav[role="navigation"] a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+main {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+main > section {
+  padding: 34px 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+#home {
+  padding-top: 38px;
+  padding-bottom: 38px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+#home > article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+#home h1 {
+  font-size: 32px;
+}
+
+#home a[href="#contact"] {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#home a[href="#contact"]:hover {
+  background: var(--brand-hover);
+}
+
+#home > img {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  height: 240px;
+  object-fit: cover;
+}
+
+#about > article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+#about > aside {
+  background: rgba(34, 90, 200, 0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+#about ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+#services > header {
+  margin-bottom: 14px;
+}
+
+#services > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+#services article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+#services article p {
+  margin-bottom: 0;
+}
+
+#contact > header {
+  margin-bottom: 10px;
+}
+
+#contact form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#contact form p#form-help {
+  margin: 0 0 6px;
+}
+
+#contact form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#contact label {
+  font-weight: 700;
+}
+
+#contact input,
+#contact textarea {
+  font: inherit;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--text);
+}
+
+#contact small {
+  color: var(--muted);
+}
+
+#contact button[type="submit"] {
+  align-self: flex-start;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: none;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#contact button[type="submit"]:hover {
+  background: var(--brand-hover);
+}
+
+#form-status {
+  min-height: 1.2em;
+  margin: 0;
+  color: var(--muted);
+}
+
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+footer > section {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+footer h2 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+footer address {
+  font-style: normal;
+  margin: 10px 0;
+}
+
+footer a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (min-width: 1024px) {
+  header > div,
+  main,
+  footer > section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #home {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 22px;
+  }
+
+  #home > img {
+    height: 280px;
+  }
+
+  #about {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  #services > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #contact {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  #contact > header,
+  #contact form {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  header > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav[role="navigation"] ul {
+    justify-content: flex-start;
+  }
+
+  #home h1 {
+    font-size: 26px;
+  }
+}
