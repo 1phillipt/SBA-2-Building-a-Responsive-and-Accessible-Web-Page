@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img scr="logo.jpg" alt="Accessible Design Co. logo" />
+        <span>Accessible Design Co.</span>
+      </div>
+      <nav role="navigation" aria-level="Primary nagivation">
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <article>
+          <h1>Design that includes everyone</h1>
+          <p>
+            Accessible Design Co. helps teams build responsive, user-friendly
+            websites that work for everyone—across devices, browsers, and
+            assistive technologies.
+          </p>
+          <a
+            href="#contact"
+            aria-label="Go to the contact section to start a project"
+          >
+            Start a project
+          </a>
+        </article>
+      </section>
+      <section id="about" aria-labelledby="about-title">
+        <article>
+          <h2 id="about-title">About Us</h2>
+
+          <p>
+            Accessible Design Co. is a fictitious company dedicated to building
+            inclusive, accessible, and responsive digital experiences.
+          </p>
+
+          <p>
+            We believe accessibility is a fundamental part of good design. Our
+            work focuses on semantic HTML, responsive layouts, and user-centered
+            interfaces that support keyboard navigation, screen readers, and
+            assistive technologies.
+          </p>
+        </article>
+      </section>
+      <section id="services" aria-labelledby="services-title">
+        <header>
+          <h2 id="services-title">Services</h2>
+          <p>
+            We offer practical accessibility and responsive design support for
+            modern web projects.
+          </p>
+        </header>
+
+        <div>
+          <article>
+            <h3>Accessibility Audits</h3>
+            <p>
+              We review your site for semantic structure, ARIA usage, keyboard
+              navigation, and contrast issues.
+            </p>
+          </article>
+
+          <article>
+            <h3>Responsive Layout Builds</h3>
+            <p>
+              We create flexible layouts using modern CSS techniques so your
+              site works smoothly on all devices.
+            </p>
+          </article>
+
+          <article>
+            <h3>Design System Support</h3>
+            <p>
+              We help you build reusable components and consistent UI patterns
+              that remain accessible over time.
+            </p>
+          </article>
+
+          <article>
+            <h3>Forms and UX Improvements</h3>
+            <p>
+              We improve form usability with clear labels, helpful guidance, and
+              accessible validation messaging.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
